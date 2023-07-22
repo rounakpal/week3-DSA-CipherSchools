@@ -1,0 +1,115 @@
+#include<iostream>
+using namespace std;
+
+  //single
+  class A{};
+  class B: public A{};
+  
+  //multiple
+  class A{};
+  class B{};
+  class C: public A, public B{};
+
+  //multilevel
+  class A{};
+  class B: public A{};
+  class C: public B{};
+
+  //herirarchical
+  class A{};
+  class B: public A{};
+  class C: public A{};
+
+  // hybrid
+  class A{};
+  class B{};
+  class C: public A, public B{};
+  class D: public C{};
+  class E: public C{};
+
+
+____________________________________________________________________
+____________________________________________________________________
+
+#include<iostream>
+using namespace std;
+
+class A
+{
+  int a;
+  protected:
+  int b;
+  public:
+  int c;
+
+};
+
+class B: public A
+{
+  public:
+  //private protected:
+  // int b;
+  //private public:
+  //int c;
+  public:
+};
+
+int main()
+{
+
+ //A obj;
+ B obj;
+ //cout<<obj.a<<obj.b<<obj.c<<endl;
+ //cout<<obj.a<<obj.b<<obj.c<<endl;
+
+ return 0;
+
+}
+____________________________________________________________________
+____________________________________________________________________
+
+#include<iostream>
+using namespace std;
+
+class Animal
+{
+  public:
+  void speak()
+  {
+    cout<<"They made a sound.!<<endl;
+  }
+};
+ 
+class Dog:public Animal
+{
+  public:
+  void speak()
+  {
+    cout<<"wooff bhavv grrrrrrrr"<<endl;
+};
+
+class Cat:public Animal
+{
+  public:
+  void speak()
+  {
+    cout<<"Meowwwwwwwwwww"<<endl;
+  }
+};
+
+
+};
+
+int main()
+{
+  Dog d;
+  Animal a;
+  Cat c;
+
+  a.speak();
+  b.speak();
+  c.speak();
+ 
+  return 0;
+
+}
